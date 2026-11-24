@@ -27,43 +27,86 @@ body.idle { cursor: none; }
 #glow { left: 360px; top: 40px; width: 1200px; height: 1000px; border-radius: 50%;
   background: radial-gradient(closest-side, rgba(217,84,30,.16), rgba(217,84,30,.05) 55%, rgba(217,84,30,0)); filter: blur(20px); }
 #orbit { left: 210px; top: -210px; width: 1500px; height: 1500px; border-radius: 50%; border: 2px solid rgba(255,255,255,.045); }
-#orbit i { position: absolute; left: 50%; top: -9px; width: 16px; height: 16px; margin-left: -8px; border-radius: 50%; background: var(--or); opacity: .55; box-shadow: 0 0 24px rgba(217,84,30,.8); }
+#orbit i { position: absolute; left: 50%; top: -9px; width: 16px; height: 16px; margin-left: -8px; border-radius: 50%; background: var(--or); opacity: .45; box-shadow: 0 0 24px rgba(217,84,30,.8); }
 #grain { inset: 0; opacity: .07; mix-blend-mode: overlay; pointer-events: none;
   background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='240' height='240'><filter id='n'><feTurbulence type='fractalNoise' baseFrequency='.85' numOctaves='2' stitchTiles='stitch'/></filter><rect width='100%' height='100%' filter='url(%23n)'/></svg>"); }
 #vig { inset: 0; pointer-events: none; background: radial-gradient(ellipse at center, rgba(0,0,0,0) 55%, rgba(0,0,0,.55) 100%); }
 
 /* ---------- wordmark ---------- */
-.word { display: inline-block; white-space: nowrap; letter-spacing: -.035em; line-height: 1; }
+.word { display: inline-block; white-space: nowrap; letter-spacing: -.035em; line-height: 1; padding: .08em .05em .06em; }
 .word .L { display: inline-block; }
 .word .pd { display: inline-block; width: .19em; height: .19em; margin-left: .05em; border-radius: 50%; background: var(--or); }
 #hero { left: 0; top: 0; width: 1920px; height: 1080px; display: flex; align-items: center; justify-content: center; padding-bottom: 60px; }
-#hero .word { font-size: 300px; overflow: hidden; padding: .08em .05em .06em; }
+#hero .word { font-size: 300px; overflow: hidden; }
 #hero .pd { visibility: hidden; }
 #dot { left: 932px; top: 512px; width: 56px; height: 56px; border-radius: 50%; background: var(--or); box-shadow: 0 0 60px rgba(217,84,30,.55); }
 #ripple, #ripple2 { left: 932px; top: 512px; width: 56px; height: 56px; border-radius: 50%; border: 3px solid var(--or); opacity: 0; }
 #tag { left: 0; width: 1920px; top: 700px; text-align: center; font-size: 26px; letter-spacing: .32em; text-transform: uppercase; color: var(--mute); font-weight: 600; }
 #bug { left: 96px; top: 66px; }
-#bug .word { font-size: 54px; padding: .08em .05em .06em; }
+#bug .word { font-size: 54px; }
 
-/* ---------- scene C: HR flow ---------- */
-#eyebrow { left: 140px; top: 246px; font-size: 24px; letter-spacing: .3em; text-transform: uppercase; color: var(--or); font-weight: 700; }
+/* ---------- HR beats ---------- */
+#eyebrow { left: 140px; top: 236px; font-size: 24px; letter-spacing: .3em; text-transform: uppercase; color: var(--or); font-weight: 700; }
 .mask { overflow: hidden; padding: .04em .06em .08em 0; }
-.hl { left: 132px; top: 300px; font-size: 172px; letter-spacing: -.045em; line-height: 1; }
+.hl { left: 132px; top: 290px; font-size: 164px; letter-spacing: -.045em; line-height: 1; white-space: nowrap; }
 .hl .in { display: inline-block; }
 .hl .pd, .end .pd { display: inline-block; width: .17em; height: .17em; margin-left: .05em; border-radius: 50%; background: var(--or); }
-.sub { left: 140px; top: 540px; width: 760px; font-size: 44px; line-height: 1.22; color: #B9B9B5; letter-spacing: -.01em; }
+.sub { left: 140px; top: 520px; width: 760px; font-size: 42px; line-height: 1.24; color: #B9B9B5; letter-spacing: -.01em; }
 
-#track { left: 140px; top: 880px; width: 760px; height: 60px; }
+#track { left: 140px; top: 880px; width: 780px; height: 60px; }
 #track .rail { position: absolute; left: 10px; right: 10px; top: 9px; height: 2px; background: #2A2A2A; }
-#track .st { position: absolute; top: 34px; font-size: 22px; font-weight: 600; letter-spacing: .02em; color: var(--ink); transform: translateX(-50%); }
+#track .st { position: absolute; top: 34px; font-size: 19px; font-weight: 600; letter-spacing: .02em; color: var(--ink); transform: translateX(-50%); white-space: nowrap; }
 #track .pip { position: absolute; top: 4px; width: 12px; height: 12px; margin-left: -6px; border-radius: 50%; background: #3A3A3A; }
 #track .run { position: absolute; top: -1px; width: 22px; height: 22px; margin-left: -11px; border-radius: 50%; background: var(--or); box-shadow: 0 0 26px rgba(217,84,30,.8); }
 
-.panel { left: 1000px; top: 190px; width: 800px; height: 700px; }
+.panel { left: 1000px; top: 170px; width: 800px; height: 740px; }
 .tagS { position: absolute; font-size: 15px; letter-spacing: .14em; text-transform: uppercase; color: var(--dim); font-weight: 600; }
+.tick { flex: none; width: 34px; height: 34px; border-radius: 50%; background: rgba(52,180,110,.16); display: grid; place-items: center; }
+.tick svg { width: 20px; height: 20px; }
+.chip { position: absolute; display: flex; align-items: center; gap: 12px; padding: 16px 24px 16px 18px; border-radius: 99px; background: var(--card2); border: 1px solid var(--line); font-size: 24px; font-weight: 600; white-space: nowrap; box-shadow: 0 20px 50px rgba(0,0,0,.5); }
+
+.card { position: absolute; left: 0; top: 40px; width: 800px; border-radius: 34px; background: var(--card); border: 1px solid var(--line); box-shadow: 0 40px 120px rgba(0,0,0,.6); padding: 40px 44px; }
+.card .ch { display: flex; justify-content: space-between; align-items: baseline; }
+.card .ct { font-size: 40px; letter-spacing: -.02em; }
+.card .cm { font-size: 21px; color: var(--mute); }
+.foot { margin-top: 8px; padding-top: 22px; border-top: 1px solid var(--line); font-size: 24px; color: #CFCFCB; display: flex; align-items: center; gap: 12px; }
+.foot b { color: var(--ink); }
+.foot i { width: 12px; height: 12px; border-radius: 50%; background: var(--or); flex: none; }
+
+/* hiring board */
+.board { position: relative; display: grid; grid-template-columns: repeat(3, 1fr); gap: 18px; margin-top: 28px; height: 330px; }
+.col { background: #181818; border-radius: 22px; padding: 16px; }
+.col h4 { font-size: 17px; letter-spacing: .14em; text-transform: uppercase; color: var(--mute); font-weight: 700; display: flex; justify-content: space-between; margin-bottom: 14px; }
+.col h4 span { color: var(--dim); }
+.cand { height: 84px; border-radius: 16px; background: #222; display: flex; align-items: center; gap: 12px; padding: 0 14px; margin-bottom: 12px; }
+.cand .av { width: 44px; height: 44px; font-size: 16px; }
+.cand b { display: block; font-size: 19px; font-weight: 600; white-space: nowrap; }
+.cand span { font-size: 15px; color: var(--mute); }
+#mover { position: absolute; left: 259px; top: 146px; width: 193px; background: #2A2A2A; border: 1px solid rgba(217,84,30,.6); box-shadow: 0 16px 40px rgba(0,0,0,.6); }
+.hchips { display: flex; gap: 14px; margin-top: 26px; }
+.hchips .chip { position: static; box-shadow: none; font-size: 22px; padding: 12px 20px 12px 14px; }
+.hchips .tick { width: 30px; height: 30px; } .hchips .tick svg { width: 17px; height: 17px; }
+
+/* schedule grid */
+.grid { display: grid; grid-template-columns: 130px repeat(7, 1fr); gap: 8px; margin-top: 28px; align-items: center; }
+.grid .dh { font-size: 16px; letter-spacing: .12em; text-transform: uppercase; color: var(--mute); font-weight: 700; text-align: center; }
+.grid .nm { font-size: 20px; font-weight: 600; }
+.cell { position: relative; height: 58px; }
+.cell > div { position: absolute; inset: 0; border-radius: 12px; display: grid; place-items: center; font-size: 17px; font-weight: 600; }
+.sh { background: rgba(217,84,30,.16); color: #F3A27D; }
+.rs { background: #1E1E1E; color: var(--dim); }
+.warnrow { position: absolute; left: 40px; right: 40px; height: 70px; border-radius: 14px; border: 2px solid var(--or); pointer-events: none; }
+.sfoot { display: flex; justify-content: space-between; align-items: center; margin-top: 26px; padding-top: 22px; border-top: 1px solid var(--line); }
+.warn { position: relative; height: 52px; width: 430px; }
+.warn > div { position: absolute; inset: 0; display: flex; align-items: center; gap: 12px; font-size: 21px; font-weight: 600; }
+.warn .w1 { color: #F08A5D; } .warn .w2 { color: #6FD39C; }
+.ex { flex: none; width: 30px; height: 30px; border-radius: 50%; background: rgba(217,84,30,.25); display: grid; place-items: center; font-weight: 800; font-size: 17px; color: #F08A5D; }
+.pub { position: relative; width: 200px; height: 60px; }
+.pub > div { position: absolute; inset: 0; border-radius: 16px; display: flex; align-items: center; justify-content: center; gap: 10px; font-size: 22px; font-weight: 700; }
+.pub .p1 { background: var(--ink); color: #0B0B0B; } .pub .p2 { background: var(--ok); color: #fff; }
 
 /* phone */
-.phone { position: absolute; left: 90px; top: 0; width: 350px; height: 700px; border-radius: 54px; background: #0F0F0F; border: 3px solid #2C2C2C;
+.phone { position: absolute; left: 90px; top: 20px; width: 350px; height: 700px; border-radius: 54px; background: #0F0F0F; border: 3px solid #2C2C2C;
   box-shadow: 0 40px 120px rgba(0,0,0,.7), inset 0 0 0 8px #050505; padding: 26px 30px; overflow: hidden; }
 .phone .notch { width: 110px; height: 30px; border-radius: 20px; background: #000; margin: -4px auto 18px; }
 .phone .hi { font-size: 21px; color: var(--mute); }
@@ -81,52 +124,49 @@ body.idle { cursor: none; }
 .btn { position: absolute; left: 30px; right: 30px; bottom: 34px; height: 86px; border-radius: 24px; display: flex; align-items: center; justify-content: center; gap: 12px; font-size: 28px; font-weight: 600; }
 .btn.a { background: var(--or); color: #fff; }
 .btn.b { background: var(--ok); color: #fff; font-size: 25px; }
-.chip { position: absolute; display: flex; align-items: center; gap: 12px; padding: 16px 24px 16px 18px; border-radius: 99px; background: var(--card2); border: 1px solid var(--line); font-size: 24px; font-weight: 600; white-space: nowrap; box-shadow: 0 20px 50px rgba(0,0,0,.5); }
-.tick { flex: none; width: 34px; height: 34px; border-radius: 50%; background: rgba(52,180,110,.16); display: grid; place-items: center; }
-.tick svg { width: 20px; height: 20px; }
 
-/* cards */
-.card { position: absolute; left: 0; top: 40px; width: 800px; border-radius: 34px; background: var(--card); border: 1px solid var(--line); box-shadow: 0 40px 120px rgba(0,0,0,.6); padding: 40px 44px; }
-.card .ch { display: flex; justify-content: space-between; align-items: baseline; }
-.card .ct { font-size: 40px; letter-spacing: -.02em; }
-.card .cm { font-size: 21px; color: var(--mute); }
+/* rows (approvals, reports) */
 .row { display: flex; align-items: center; gap: 20px; padding: 20px 0; border-top: 1px solid var(--line); }
 .ch + .row { margin-top: 26px; }
 .av { flex: none; width: 56px; height: 56px; border-radius: 50%; background: #262626; display: grid; place-items: center; font-size: 20px; font-weight: 700; color: #CFCFCB; }
 .row .who { flex: 1; }
 .row .who b { display: block; font-size: 26px; font-weight: 600; }
 .row .who span { font-size: 19px; color: var(--mute); }
+.row .amt { font-size: 24px; font-weight: 600; font-variant-numeric: tabular-nums; }
+.ag { flex: none; width: 92px; height: 56px; border-radius: 14px; background: #222; display: grid; place-items: center; font-size: 17px; font-weight: 800; letter-spacing: .04em; color: #CFCFCB; }
 .stt { display: flex; align-items: center; gap: 10px; padding: 10px 18px 10px 12px; border-radius: 99px; font-size: 20px; font-weight: 600; white-space: nowrap; }
 .stt.ok { background: rgba(52,180,110,.13); color: #6FD39C; }
 .stt.hr { background: rgba(217,84,30,.16); color: #F08A5D; }
 .stt .tick { width: 28px; height: 28px; background: rgba(52,180,110,.2); }
 .stt .tick svg { width: 16px; height: 16px; }
-.stt .ex { width: 28px; height: 28px; border-radius: 50%; background: rgba(217,84,30,.25); display: grid; place-items: center; font-weight: 800; font-size: 17px; }
-.foot { margin-top: 8px; padding-top: 22px; border-top: 1px solid var(--line); font-size: 24px; color: #CFCFCB; }
-.foot b { color: var(--ink); }
+.stt .ex { width: 28px; height: 28px; }
 
+/* payroll */
 .pay { background: linear-gradient(160deg, #1B1B1B, #121212); }
-.net { margin-top: 30px; }
+.net { margin-top: 26px; }
 .net .lab { font-size: 20px; letter-spacing: .16em; text-transform: uppercase; color: var(--mute); font-weight: 600; }
-.net .num { font-size: 104px; letter-spacing: -.035em; margin-top: 6px; line-height: 1; font-variant-numeric: tabular-nums; }
-.net .num .peso { font-size: 80px; margin-right: 10px; color: var(--or); }
-.gov { display: grid; grid-template-columns: 1fr 1fr; gap: 14px 18px; margin-top: 34px; }
-.gi { display: flex; align-items: center; gap: 14px; padding: 16px 18px; border-radius: 18px; background: #1F1F1F; font-size: 24px; font-weight: 600; }
-.gi .tick { width: 30px; height: 30px; }
-.gi .tick svg { width: 17px; height: 17px; }
-.slip { margin-top: 26px; display: inline-flex; align-items: center; gap: 12px; padding: 14px 22px; border-radius: 99px; border: 1px solid rgba(217,84,30,.5); color: #F08A5D; font-size: 22px; font-weight: 600; }
+.net .num { font-size: 100px; letter-spacing: -.035em; margin-top: 6px; line-height: 1; font-variant-numeric: tabular-nums; }
+.net .num .peso { font-size: 78px; margin-right: 10px; color: var(--or); }
+.basis { display: flex; gap: 12px; margin-top: 26px; }
+.basis div { flex: 1; padding: 14px 18px; border-radius: 16px; border: 1px solid var(--line); font-size: 20px; color: var(--mute); }
+.basis b { display: block; font-size: 30px; color: var(--ink); font-weight: 600; margin-top: 2px; }
+.gov { display: grid; grid-template-columns: 1fr 1fr; gap: 12px 16px; margin-top: 16px; }
+.gi { display: flex; align-items: center; gap: 14px; padding: 14px 18px; border-radius: 16px; background: #1F1F1F; font-size: 23px; font-weight: 600; }
+.gi .tick { width: 30px; height: 30px; } .gi .tick svg { width: 17px; height: 17px; }
+.slip { margin-top: 22px; display: inline-flex; align-items: center; gap: 12px; padding: 14px 22px; border-radius: 99px; border: 1px solid rgba(217,84,30,.5); color: #F08A5D; font-size: 22px; font-weight: 600; }
 .slip i { width: 12px; height: 12px; border-radius: 50%; background: var(--or); }
 
-/* ---------- scene D ---------- */
+/* ---------- end card ---------- */
 .end { left: 0; width: 1920px; text-align: center; font-size: 132px; letter-spacing: -.045em; line-height: 1; }
 .end .mask { display: inline-block; }
 .end .in { display: inline-block; }
-#e1 { top: 330px; color: #B9B9B5; }
-#e2 { top: 480px; }
-#cta { left: 0; width: 1920px; top: 700px; display: flex; justify-content: center; }
-#cta .pill { display: flex; align-items: center; gap: 18px; padding: 22px 40px 22px 30px; border-radius: 99px; background: var(--ink); color: #0B0B0B; font-size: 34px; font-weight: 700; letter-spacing: -.01em; }
-#cta .pill i { width: 20px; height: 20px; border-radius: 50%; background: var(--or); box-shadow: 0 0 0 0 rgba(217,84,30,.6); }
-#cta .pill svg { width: 30px; height: 30px; }
+#e1 { top: 250px; color: #B9B9B5; }
+#e2 { top: 400px; }
+#feats { left: 0; width: 1920px; top: 620px; display: flex; justify-content: center; gap: 14px; }
+#feats span { padding: 14px 24px; border-radius: 99px; border: 1px solid #333; font-size: 25px; font-weight: 600; color: #CFCFCB; background: rgba(20,20,20,.8); }
+#cta { left: 0; width: 1920px; top: 760px; display: flex; justify-content: center; }
+#cta .pill { display: flex; align-items: center; gap: 18px; padding: 24px 44px 24px 32px; border-radius: 99px; background: var(--ink); color: #0B0B0B; font-size: 36px; font-weight: 700; letter-spacing: -.01em; }
+#cta .pill i { width: 20px; height: 20px; border-radius: 50%; background: var(--or); }
 
 #hint { position: fixed; left: 50%; bottom: 24px; transform: translateX(-50%); padding: 10px 18px; border-radius: 99px; background: rgba(40,40,40,.9); color: #ddd;
   font: 600 14px system-ui; transition: opacity .4s; z-index: 9; }
@@ -138,33 +178,80 @@ body.idle #hint, body.full #hint { opacity: 0; }
   <div id="glow"></div>
   <div id="orbit"><i></i></div>
 
-  <!-- A: wordmark build -->
+  <!-- intro: the dot, then the name -->
   <div id="hero"><div class="word d" id="heroWord"><span class="L">O</span><span class="L">r</span><span class="L">v</span><span class="L">a</span><span class="L">n</span><span class="L">e</span><span class="pd" id="heroPd"></span></div></div>
   <div id="ripple"></div><div id="ripple2"></div>
   <div id="dot"></div>
   <div id="tag">Custom AI operating systems · Philippines</div>
   <div id="bug"><div class="word d" id="bugWord">Orvane<span class="pd" id="bugPd"></span></div></div>
 
-  <!-- C: HR flow -->
+  <!-- HR beats: headline + line + track -->
   <div id="eyebrow">Orvane HR</div>
-  <div class="hl d mask" id="h1"><span class="in">Clock in<span class="pd"></span></span></div>
-  <div class="hl d mask" id="h2"><span class="in">Approved<span class="pd"></span></span></div>
-  <div class="hl d mask" id="h3"><span class="in">Paid<span class="pd"></span></span></div>
-  <div class="sub" id="s1">Selfie and location, from their own phone.</div>
-  <div class="sub" id="s2">Clean shifts approve themselves. Only problems reach HR.</div>
-  <div class="sub" id="s3">SSS, PhilHealth, Pag-IBIG and tax, built into every run.</div>
+  <div class="hl d mask" id="h0"><span class="in">Hired<span class="pd"></span></span></div>
+  <div class="hl d mask" id="h1"><span class="in">Scheduled<span class="pd"></span></span></div>
+  <div class="hl d mask" id="h2"><span class="in">Clocked in<span class="pd"></span></span></div>
+  <div class="hl d mask" id="h3"><span class="in">Approved<span class="pd"></span></span></div>
+  <div class="hl d mask" id="h4"><span class="in">Paid<span class="pd"></span></span></div>
+  <div class="hl d mask" id="h5"><span class="in">Filed<span class="pd"></span></span></div>
+  <div class="sub" id="s0">From applicant to offer letter to 201 file, in one flow.</div>
+  <div class="sub" id="s1">Weekly rosters draft themselves, with rest-day checks. HR taps Publish.</div>
+  <div class="sub" id="s2">Selfie and location, from the employee's own phone.</div>
+  <div class="sub" id="s3">Clean shifts approve themselves. Only problems reach HR.</div>
+  <div class="sub" id="s4">Monthly, daily and hourly staff in one run, contributions included.</div>
+  <div class="sub" id="s5">SSS, PhilHealth, Pag-IBIG and BIR reports, with every deadline tracked.</div>
 
   <div id="track">
     <div class="rail"></div>
-    <div class="pip" style="left:10px"></div><div class="pip" style="left:380px"></div><div class="pip" style="left:750px"></div>
-    <div class="st" id="t1" style="left:10px; transform:none">Clock-in</div>
-    <div class="st" id="t2" style="left:380px">Approvals</div>
-    <div class="st" id="t3" style="left:750px; transform:translateX(-100%)">Payroll</div>
+    <div class="pip" style="left:10px"></div><div class="pip" style="left:162px"></div><div class="pip" style="left:314px"></div>
+    <div class="pip" style="left:466px"></div><div class="pip" style="left:618px"></div><div class="pip" style="left:770px"></div>
+    <div class="st" id="t0" style="left:10px; transform:none">Hiring</div>
+    <div class="st" id="t1" style="left:162px">Schedule</div>
+    <div class="st" id="t2" style="left:314px">Clock-in</div>
+    <div class="st" id="t3" style="left:466px">Approvals</div>
+    <div class="st" id="t4" style="left:618px">Payroll</div>
+    <div class="st" id="t5" style="left:770px; transform:translateX(-100%)">Reports</div>
     <div class="run" id="run" style="left:10px"></div>
   </div>
 
-  <!-- panel 1: phone clock-in -->
+  <!-- 0 hiring -->
+  <div class="panel" id="p0">
+    <div class="card">
+      <div class="ch"><div class="ct d">Hiring</div><div class="cm">Warehouse associate · 2 spots</div></div>
+      <div class="board">
+        <div class="col"><h4>Applied</h4>
+          <div class="cand"><div class="av">JL</div><div><b>Jun Lim</b><span>Applied Mon</span></div></div>
+          <div class="cand"><div class="av">BG</div><div><b>Bea Garcia</b><span>Applied Tue</span></div></div>
+        </div>
+        <div class="col"><h4>Interview</h4>
+          <div class="cand"><div class="av">NV</div><div><b>Nico Villa</b><span>Thu, 10 AM</span></div></div>
+        </div>
+        <div class="col"><h4>Offer</h4></div>
+        <div class="cand" id="mover"><div class="av" style="background:var(--or);color:#fff">RB</div><div><b>Rico Bautista</b><span>Interviewed Wed</span></div></div>
+      </div>
+      <div class="hchips">
+        <div class="chip" id="hc1"><span class="tick"><svg viewBox="0 0 20 20"><path d="M4 10.5l4 4 8-9" fill="none" stroke="#34B46E" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/></svg></span>Offer letter ready</div>
+        <div class="chip" id="hc2"><span class="tick"><svg viewBox="0 0 20 20"><path d="M4 10.5l4 4 8-9" fill="none" stroke="#34B46E" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/></svg></span>201 file created</div>
+      </div>
+    </div>
+    <div class="tagS" style="left:44px; top:0">Sample data</div>
+  </div>
+
+  <!-- 1 schedule -->
   <div class="panel" id="p1">
+    <div class="card">
+      <div class="ch"><div class="ct d">Schedule</div><div class="cm">Next week · draft</div></div>
+      <div class="grid" id="sgrid"></div>
+      <div class="sfoot">
+        <div class="warn"><div class="w1" id="w1"><span class="ex">!</span>Carlo has no rest day</div><div class="w2" id="w2"><span class="tick"><svg viewBox="0 0 20 20"><path d="M4 10.5l4 4 8-9" fill="none" stroke="#6FD39C" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/></svg></span>Rest day added. All clear.</div></div>
+        <div class="pub"><div class="p1" id="pb1">Publish</div><div class="p2" id="pb2"><svg viewBox="0 0 20 20" width="22" height="22"><path d="M4 10.5l4 4 8-9" fill="none" stroke="#fff" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/></svg>Published</div></div>
+      </div>
+    </div>
+    <div class="warnrow" id="wrow"></div>
+    <div class="tagS" style="left:44px; top:0">Sample data</div>
+  </div>
+
+  <!-- 2 clock-in phone -->
+  <div class="panel" id="p2">
     <div class="phone">
       <div class="notch"></div>
       <div class="hi">Good morning,</div>
@@ -177,60 +264,85 @@ body.idle #hint, body.full #hint { opacity: 0; }
       <div class="btn a" id="btnA">Clock in</div>
       <div class="btn b" id="btnB"><span class="tick" style="background:rgba(255,255,255,.22)"><svg viewBox="0 0 20 20"><path d="M4 10.5l4 4 8-9" fill="none" stroke="#fff" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/></svg></span>Clocked in · 7:58 AM</div>
     </div>
-    <div class="chip" id="c1" style="left:470px; top:250px"><span class="tick"><svg viewBox="0 0 20 20"><path d="M4 10.5l4 4 8-9" fill="none" stroke="#34B46E" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/></svg></span>Location checked</div>
-    <div class="chip" id="c2" style="left:470px; top:350px"><span class="tick"><svg viewBox="0 0 20 20"><path d="M4 10.5l4 4 8-9" fill="none" stroke="#34B46E" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/></svg></span>Selfie taken</div>
-    <div class="tagS" style="left:470px; top:660px">Sample data</div>
+    <div class="chip" id="c1" style="left:470px; top:270px"><span class="tick"><svg viewBox="0 0 20 20"><path d="M4 10.5l4 4 8-9" fill="none" stroke="#34B46E" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/></svg></span>Location checked</div>
+    <div class="chip" id="c2" style="left:470px; top:370px"><span class="tick"><svg viewBox="0 0 20 20"><path d="M4 10.5l4 4 8-9" fill="none" stroke="#34B46E" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/></svg></span>Selfie taken</div>
+    <div class="tagS" style="left:470px; top:680px">Sample data</div>
   </div>
 
-  <!-- panel 2: approvals -->
-  <div class="panel" id="p2">
+  <!-- 3 approvals -->
+  <div class="panel" id="p3">
     <div class="card">
       <div class="ch"><div class="ct d">Approvals</div><div class="cm">Today · 4 shifts</div></div>
       <div class="row" id="r1"><div class="av">AR</div><div class="who"><b>Ana Reyes</b><span>7:58 AM – 5:02 PM</span></div><div class="stt ok" id="q1"><span class="tick"><svg viewBox="0 0 20 20"><path d="M4 10.5l4 4 8-9" fill="none" stroke="#6FD39C" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/></svg></span>Approved</div></div>
       <div class="row" id="r2"><div class="av">JD</div><div class="who"><b>Joy Dela Cruz</b><span>8:00 AM – 5:00 PM</span></div><div class="stt ok" id="q2"><span class="tick"><svg viewBox="0 0 20 20"><path d="M4 10.5l4 4 8-9" fill="none" stroke="#6FD39C" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/></svg></span>Approved</div></div>
       <div class="row" id="r3"><div class="av">CM</div><div class="who"><b>Carlo Mendoza</b><span>8:12 AM – 5:00 PM</span></div><div class="stt hr" id="q3"><span class="ex">!</span>Late 12 min · to HR</div></div>
       <div class="row" id="r4"><div class="av">MS</div><div class="who"><b>Mark Santos</b><span>7:55 AM – 5:05 PM</span></div><div class="stt ok" id="q4"><span class="tick"><svg viewBox="0 0 20 20"><path d="M4 10.5l4 4 8-9" fill="none" stroke="#6FD39C" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/></svg></span>Approved</div></div>
-      <div class="foot" id="f2"><b>3 approved themselves.</b> 1 needs HR.</div>
+      <div class="foot" id="f3"><b>3 approved themselves.</b> 1 needs HR.</div>
     </div>
     <div class="tagS" style="left:44px; top:0">Sample data</div>
   </div>
 
-  <!-- panel 3: payroll -->
-  <div class="panel" id="p3">
+  <!-- 4 payroll -->
+  <div class="panel" id="p4">
     <div class="card pay">
       <div class="ch"><div class="ct d">Payroll run</div><div class="cm">Nov 16–30 · 48 people</div></div>
       <div class="net"><div class="lab">Net pay</div><div class="num d"><span class="peso">₱</span><span id="net">0.00</span></div></div>
+      <div class="basis"><div id="b1">Monthly<b>12</b></div><div id="b2">Daily<b>30</b></div><div id="b3">Hourly<b>6</b></div></div>
       <div class="gov">
         <div class="gi" id="g1"><span class="tick"><svg viewBox="0 0 20 20"><path d="M4 10.5l4 4 8-9" fill="none" stroke="#34B46E" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/></svg></span>SSS</div>
         <div class="gi" id="g2"><span class="tick"><svg viewBox="0 0 20 20"><path d="M4 10.5l4 4 8-9" fill="none" stroke="#34B46E" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/></svg></span>PhilHealth</div>
         <div class="gi" id="g3"><span class="tick"><svg viewBox="0 0 20 20"><path d="M4 10.5l4 4 8-9" fill="none" stroke="#34B46E" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/></svg></span>Pag-IBIG</div>
-        <div class="gi" id="g4"><span class="tick"><svg viewBox="0 0 20 20"><path d="M4 10.5l4 4 8-9" fill="none" stroke="#34B46E" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/></svg></span>Withholding tax</div>
+        <div class="gi" id="g4"><span class="tick"><svg viewBox="0 0 20 20"><path d="M4 10.5l4 4 8-9" fill="none" stroke="#34B46E" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/></svg></span>13th month</div>
       </div>
       <div class="slip" id="slip"><i></i>Payslips in every employee's app</div>
     </div>
     <div class="tagS" style="left:44px; top:0">Sample data</div>
   </div>
 
-  <!-- D: end card -->
-  <div class="end d" id="e1"><span class="mask"><span class="in">From clock-in to payslip,</span></span></div>
+  <!-- 5 government reports -->
+  <div class="panel" id="p5">
+    <div class="card">
+      <div class="ch"><div class="ct d">Government reports</div><div class="cm">November</div></div>
+      <div class="row" id="v1"><div class="ag">SSS</div><div class="who"><b>Contributions</b><span>48 employees</span></div><div class="amt"><span class="peso">₱</span>121,440.00</div><div class="stt ok" id="x1"><span class="tick"><svg viewBox="0 0 20 20"><path d="M4 10.5l4 4 8-9" fill="none" stroke="#6FD39C" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/></svg></span>Ready</div></div>
+      <div class="row" id="v2"><div class="ag">PHIC</div><div class="who"><b>PhilHealth</b><span>48 employees</span></div><div class="amt"><span class="peso">₱</span>61,250.00</div><div class="stt ok" id="x2"><span class="tick"><svg viewBox="0 0 20 20"><path d="M4 10.5l4 4 8-9" fill="none" stroke="#6FD39C" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/></svg></span>Ready</div></div>
+      <div class="row" id="v3"><div class="ag">HDMF</div><div class="who"><b>Pag-IBIG</b><span>48 employees</span></div><div class="amt"><span class="peso">₱</span>19,200.00</div><div class="stt ok" id="x3"><span class="tick"><svg viewBox="0 0 20 20"><path d="M4 10.5l4 4 8-9" fill="none" stroke="#6FD39C" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/></svg></span>Ready</div></div>
+      <div class="row" id="v4"><div class="ag">BIR</div><div class="who"><b>1601-C</b><span>Withholding tax</span></div><div class="amt"><span class="peso">₱</span>38,915.40</div><div class="stt ok" id="x4"><span class="tick"><svg viewBox="0 0 20 20"><path d="M4 10.5l4 4 8-9" fill="none" stroke="#6FD39C" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/></svg></span>Ready</div></div>
+      <div class="foot" id="f5"><i></i><b>Next deadline in 6 days.</b> Nothing missed.</div>
+    </div>
+    <div class="tagS" style="left:44px; top:0">Sample data</div>
+  </div>
+
+  <!-- end card -->
+  <div class="end d" id="e1"><span class="mask"><span class="in">From hiring to payslip,</span></span></div>
   <div class="end d" id="e2"><span class="mask"><span class="in">one system<span class="pd"></span></span></span></div>
+  <div id="feats"><span>201 files</span><span>Org chart</span><span>Leave</span><span>Overtime</span><span>13th month</span><span>Final pay</span><span>Memos</span><span>Employee app</span></div>
   <div id="cta"><div class="pill" id="pill"><i></i>Ask us for a live demo</div></div>
 
   <div id="grain"></div>
   <div id="vig"></div>
-</div>
-</div>
+</div></div>
 <div id="hint">Click or press F for fullscreen</div>
 
 <script>
 (() => {
-const T = 10000;                                   // loop length, ms
-const EO  = 'cubic-bezier(.16,1,.3,1)';            // fast out
-const EI  = 'cubic-bezier(.6,0,.84,.2)';           // accelerate away
+const T = 32000;                                   // loop length, ms
+const EO  = 'cubic-bezier(.16,1,.3,1)';
+const EI  = 'cubic-bezier(.6,0,.84,.2)';
 const EIO = 'cubic-bezier(.65,0,.35,1)';
-const POP = 'cubic-bezier(.34,1.7,.64,1)';
+const POP = 'cubic-bezier(.34,1.6,.64,1)';
 const $ = s => document.querySelector(s);
 const stage = $('#stage');
+
+// schedule grid (built before measuring)
+(() => {
+  const g = $('#sgrid');
+  const days = ['Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat', 'Sun'];
+  const ppl = [['Ana', [1,1,1,1,1,0,0]], ['Joy', [0,1,1,1,1,1,0]], ['Carlo', [1,1,1,1,1,1,1]], ['Mark', [1,1,1,0,1,1,1]]];
+  g.innerHTML = '<div></div>' + days.map(d => `<div class="dh">${d}</div>`).join('') +
+    ppl.map(([n, w], r) => `<div class="nm">${n}</div>` + w.map((on, c) =>
+      `<div class="cell"><div class="${on ? 'sh' : 'rs'} sc" data-c="${c}" ${r === 2 && c === 6 ? 'id="fixA"' : ''}>${on ? '8–5' : 'Rest'}</div>` +
+      (r === 2 && c === 6 ? '<div class="rs" id="fixB">Rest</div>' : '') + '</div>').join('')).join('');
+})();
 
 let css = '', n = 0;
 const jobs = [];
@@ -244,123 +356,161 @@ function A(target, frames) {
     `${(ms / T * 100).toFixed(4)}%{${p}${e ? ';animation-timing-function:' + e : ''}}`).join('') + '}\n';
   els.forEach(el => jobs.push([el, name]));
 }
-// hidden -> shown over [a, a+din]; shown -> gone over [b, b+dout]
 function show(t, a, b, o = {}) {
   const from = o.from ?? 'opacity:0;transform:translateY(40px)';
   const to   = o.to   ?? 'opacity:1;transform:none';
   const out  = o.out  ?? 'opacity:0;transform:translateY(-30px)';
-  const din = o.din ?? 500, dout = o.dout ?? 320;
+  const din = o.din ?? 800, dout = o.dout ?? 450;
   A(t, [[0, from], [a, from, o.ein ?? EO], [a + din, to], [b, to, o.eout ?? EI], [b + dout, out]]);
 }
-const rise = (t, a, b, o = {}) => show(t, a, b, { from: 'transform:translateY(112%)', to: 'transform:none', out: 'transform:translateY(-112%)', din: 650, dout: 380, ...o });
-const pop  = (t, a, b, o = {}) => show(t, a, b, { from: 'opacity:0;transform:scale(.6)', to: 'opacity:1;transform:none', out: 'opacity:0;transform:none', din: 420, ein: POP, dout: 250, ...o });
+const stay = { out: 'opacity:1;transform:none', dout: 10 };          // child stays until its panel leaves
+const rise = (t, a, b, o = {}) => show(t, a, b, { from: 'transform:translateY(112%)', to: 'transform:none', out: 'transform:translateY(-112%)', din: 1000, dout: 500, ...o });
+const pop  = (t, a, b, o = {}) => show(t, a, b, { from: 'opacity:0;transform:scale(.6)', to: 'opacity:1;transform:none', out: 'opacity:0;transform:none', din: 560, ein: POP, dout: 300, ...o });
+const swap = (offEl, onEl, at) => {                                  // crossfade two states at time `at`
+  A(offEl, [[0, 'opacity:1;transform:none'], [at, 'opacity:1;transform:none', EO], [at + 120, 'opacity:0;transform:scale(.94)']]);
+  A(onEl,  [[0, 'opacity:0;transform:scale(.94)'], [at, 'opacity:0;transform:scale(.94)', POP], [at + 420, 'opacity:1;transform:none']]);
+};
 
 function center(el) {
   const r = el.getBoundingClientRect(), s = stage.getBoundingClientRect();
-  return { x: r.left - s.left + r.width / 2, y: r.top - s.top + r.height / 2, w: r.width };
+  return { x: r.left - s.left + r.width / 2, y: r.top - s.top + r.height / 2, w: r.width, top: r.top - s.top, h: r.height };
 }
 
+// beat timing
+const B0 = 5200, BL = 3600;                       // first beat starts at 5.2 s, 3.6 s each
+const S = i => B0 + i * BL;                        // start of beat i
+const E = i => S(i) + BL - 450;                    // when beat i starts leaving
+const END = S(6) + 100;                            // end card starts
+
 function build() {
-  // --- measure the wordmark (no transforms applied yet) ---
+  // headlines must clear the panel
+  document.querySelectorAll('.hl').forEach(h => { const w = h.scrollWidth; if (w > 840) h.style.fontSize = Math.floor(164 * 840 / w) + 'px'; });
+
   const pd = center($('#heroPd')), hw = center($('#heroWord'));
   const bw = center($('#bugWord')), bp = center($('#bugPd'));
-  const k = bw.w / hw.w;                                     // hero -> corner scale
-  const dx = pd.x - 960, dy = pd.y - 540;                    // dot: screen centre -> period
-  const fx = bw.x - hw.x, fy = bw.y - hw.y;                  // hero flight to the corner
-  const ex = bp.x - 960, ey = bp.y - 540;                    // dot flight to the corner period
+  const k = bw.w / hw.w;
+  const dx = pd.x - 960, dy = pd.y - 540;
+  const fx = bw.x - hw.x, fy = bw.y - hw.y;
+  const ex = bp.x - 960, ey = bp.y - 540;
 
-  // ---------- A. 0.0–3.4 s: the dot, then the name ----------
+  // ---------- intro, 0–5.2 s ----------
   A('#dot', [
     [0,    'transform:translate(0,0) scale(0)'],
-    [120,  'transform:translate(0,0) scale(0)', POP],
-    [560,  'transform:translate(0,0) scale(1)'],
-    [760,  'transform:translate(0,0) scale(1)', EIO],
-    [1560, `transform:translate(${dx}px,${dy}px) scale(1)`],
-    [2950, `transform:translate(${dx}px,${dy}px) scale(1)`, EIO],
-    [3450, `transform:translate(${ex}px,${ey}px) scale(${k})`],
-    [3500, `transform:translate(${ex}px,${ey}px) scale(${k});opacity:1`],
-    [3520, `transform:translate(${ex}px,${ey}px) scale(${k});opacity:0`],
+    [250,  'transform:translate(0,0) scale(0)', POP],
+    [950,  'transform:translate(0,0) scale(1)'],
+    [1300, 'transform:translate(0,0) scale(1)', EIO],
+    [2600, `transform:translate(${dx}px,${dy}px) scale(1)`],
+    [4500, `transform:translate(${dx}px,${dy}px) scale(1)`, EIO],
+    [5150, `transform:translate(${ex}px,${ey}px) scale(${k})`],
+    [5200, `transform:translate(${ex}px,${ey}px) scale(${k});opacity:1`],
+    [5220, `transform:translate(${ex}px,${ey}px) scale(${k});opacity:0`],
   ]);
-  A('#ripple',  [[0, 'opacity:0;transform:scale(1)'], [420, 'opacity:.9;transform:scale(1)', 'cubic-bezier(.2,.7,.3,1)'], [1400, 'opacity:0;transform:scale(7)']]);
-  A('#ripple2', [[0, 'opacity:0;transform:scale(1)'], [620, 'opacity:.6;transform:scale(1)', 'cubic-bezier(.2,.7,.3,1)'], [1700, 'opacity:0;transform:scale(11)']]);
+  A('#ripple',  [[0, 'opacity:0;transform:scale(1)'], [750, 'opacity:.9;transform:scale(1)', 'cubic-bezier(.2,.7,.3,1)'], [2300, 'opacity:0;transform:scale(7)']]);
+  A('#ripple2', [[0, 'opacity:0;transform:scale(1)'], [1050, 'opacity:.6;transform:scale(1)', 'cubic-bezier(.2,.7,.3,1)'], [2800, 'opacity:0;transform:scale(11)']]);
   document.querySelectorAll('#heroWord .L').forEach((el, i) => {
-    A(el, [[0, 'transform:translateY(115%)'], [820 + i * 75, 'transform:translateY(115%)', EO], [1520 + i * 75, 'transform:none']]);
+    A(el, [[0, 'transform:translateY(115%)'], [1400 + i * 120, 'transform:translateY(115%)', EO], [2500 + i * 120, 'transform:none']]);
   });
   A('#heroWord', [
     [0, 'transform:none;opacity:1'],
-    [2950, 'transform:none;opacity:1', EIO],
-    [3450, `transform:translate(${fx}px,${fy}px) scale(${k});opacity:1`],
-    [3500, `transform:translate(${fx}px,${fy}px) scale(${k});opacity:1`],
-    [3520, `transform:translate(${fx}px,${fy}px) scale(${k});opacity:0`],
+    [4500, 'transform:none;opacity:1', EIO],
+    [5150, `transform:translate(${fx}px,${fy}px) scale(${k});opacity:1`],
+    [5200, `transform:translate(${fx}px,${fy}px) scale(${k});opacity:1`],
+    [5220, `transform:translate(${fx}px,${fy}px) scale(${k});opacity:0`],
   ]);
-  show('#tag', 1750, 2750, { from: 'opacity:0;transform:translateY(20px)', dout: 250 });
-  A('#bug', [[0, 'opacity:0'], [3480, 'opacity:0'], [3500, 'opacity:1'], [9050, 'opacity:1'], [9400, 'opacity:0']]);
+  show('#tag', 2900, 4250, { from: 'opacity:0;transform:translateY(20px)', din: 900, dout: 350 });
+  A('#bug', [[0, 'opacity:0'], [5180, 'opacity:0'], [5200, 'opacity:1'], [T - 1300, 'opacity:1'], [T - 800, 'opacity:0']]);
 
-  // ---------- C. 3.4–7.8 s: clock-in -> approvals -> payroll ----------
-  show('#eyebrow', 3450, 7500, { from: 'opacity:0;transform:translateX(-20px)' });
-  rise('#h1 .in', 3500, 4700);
-  rise('#h2 .in', 4900, 6150);
-  rise('#h3 .in', 6350, 7500);
-  show('#s1', 3650, 4650, { dout: 260 });
-  show('#s2', 5050, 6100, { dout: 260 });
-  show('#s3', 6500, 7450, { dout: 260 });
+  // ---------- HR beats ----------
+  show('#eyebrow', S(0) + 100, E(5) + 100, { from: 'opacity:0;transform:translateX(-20px)' });
+  show('#track', S(0) + 100, E(5) + 100, { from: 'opacity:0', to: 'opacity:1', out: 'opacity:0' });
+  const POS = [10, 162, 314, 466, 618, 770];
+  A('#run', POS.flatMap((x, i) => i === 0 ? [[0, 'left:10px']] : [[S(i) - 150, `left:${POS[i - 1]}px`, EIO], [S(i) + 450, `left:${x}px`]]));
+  for (let i = 0; i < 6; i++) {
+    rise(`#h${i} .in`, S(i) + 150, E(i));
+    show(`#s${i}`, S(i) + 400, E(i) - 50, { dout: 380 });
+    show(`#p${i}`, S(i) + 50, E(i), { from: 'opacity:0;transform:translateY(70px)', din: 900, out: 'opacity:0;transform:translateY(-50px)' });
+    const lab = `#t${i}`;
+    A(lab, [[0, 'opacity:.35'], [S(i) - 100, 'opacity:.35'], [S(i) + 250, 'opacity:1'], [E(i) + 200, 'opacity:1'], [E(i) + 450, i === 5 ? 'opacity:1' : 'opacity:.35']]);
+  }
 
-  show('#track', 3500, 7500, { from: 'opacity:0', to: 'opacity:1', out: 'opacity:0' });
-  A('#run', [[0, 'left:10px'], [4800, 'left:10px', EIO], [5250, 'left:380px'], [6250, 'left:380px', EIO], [6700, 'left:750px']]);
-  A('#t1', [[0, 'opacity:.35'], [3500, 'opacity:1'], [4800, 'opacity:1'], [5000, 'opacity:.35']]);
-  A('#t2', [[0, 'opacity:.35'], [4900, 'opacity:.35'], [5150, 'opacity:1'], [6250, 'opacity:1'], [6450, 'opacity:.35']]);
-  A('#t3', [[0, 'opacity:.35'], [6350, 'opacity:.35'], [6600, 'opacity:1']]);
+  // 0 hiring: Rico moves from Interview to Offer, then the letter and the 201 file
+  let s = S(0);
+  A('#mover', [[0, 'transform:none'], [s + 1100, 'transform:none', EIO], [s + 1800, 'transform:translate(243px,-96px)']]);
+  pop('#hc1', s + 1900, E(0), stay);
+  pop('#hc2', s + 2300, E(0), stay);
 
-  // panel 1 — phone
-  show('#p1', 3450, 4700, { from: 'opacity:0;transform:translateY(70px)', din: 650, out: 'opacity:0;transform:translateY(-50px)' });
-  A('#fence', [[0, 'transform:scale(.8);opacity:.5'], [3700, 'transform:scale(.8);opacity:.5', EO], [4300, 'transform:scale(1);opacity:1']]);
-  A('#btnA', [[0, 'transform:none;opacity:1'], [3950, 'transform:none;opacity:1', EO], [4060, 'transform:scale(.94);opacity:1'], [4120, 'transform:scale(.94);opacity:0']]);
-  A('#btnB', [[0, 'transform:scale(.94);opacity:0'], [4100, 'transform:scale(.94);opacity:0', POP], [4380, 'transform:none;opacity:1']]);
-  pop('#c1', 4180, 4700, { from: 'opacity:0;transform:translateX(-30px) scale(.8)' });
-  pop('#c2', 4320, 4700, { from: 'opacity:0;transform:translateX(-30px) scale(.8)' });
+  // 1 schedule: shifts draft in column by column, a rest-day warning, fixed, published
+  s = S(1);
+  document.querySelectorAll('.sc').forEach(el => { const c = +el.dataset.c; if (el.id !== 'fixA') pop(el, s + 600 + c * 90, E(1), { ...stay, din: 420 }); });
+  A('#fixA', [[0, 'opacity:0;transform:scale(.6)'], [s + 600 + 6 * 90, 'opacity:0;transform:scale(.6)', POP], [s + 1100, 'opacity:1;transform:none'], [s + 2150, 'opacity:1;transform:none', EO], [s + 2270, 'opacity:0;transform:scale(.94)']]);
+  A('#fixB', [[0, 'opacity:0;transform:scale(.94)'], [s + 2150, 'opacity:0;transform:scale(.94)', POP], [s + 2570, 'opacity:1;transform:none']]);
+  show('#w1', s + 1500, s + 2150, { from: 'opacity:0;transform:translateY(12px)', din: 400, out: 'opacity:0;transform:translateY(-12px)', dout: 200 });
+  show('#w2', s + 2250, E(1), { from: 'opacity:0;transform:translateY(12px)', din: 400, ...stay });
+  show('#wrow', s + 1450, s + 2200, { from: 'opacity:0', to: 'opacity:1', out: 'opacity:0', din: 300, dout: 250 });
+  swap('#pb1', '#pb2', s + 2650);
 
-  // panel 2 — approvals
-  show('#p2', 4900, 6150, { from: 'opacity:0;transform:translateY(70px)', din: 600, out: 'opacity:0;transform:translateY(-50px)' });
-  ['#r1', '#r2', '#r3', '#r4'].forEach((s, i) => show(s, 5000 + i * 90, 6150, { from: 'opacity:0;transform:translateX(40px)', out: 'opacity:1;transform:none', dout: 10 }));
-  [['#q1', 0], ['#q2', 1], ['#q3', 2], ['#q4', 3]].forEach(([s, i]) => pop(s, 5350 + i * 130, 6150, { out: 'opacity:1;transform:none', dout: 10 }));
-  show('#f2', 5800, 6150, { from: 'opacity:0;transform:translateY(16px)', out: 'opacity:1;transform:none', dout: 10 });
+  // 2 clock-in
+  s = S(2);
+  A('#fence', [[0, 'transform:scale(.8);opacity:.5'], [s + 400, 'transform:scale(.8);opacity:.5', EO], [s + 1200, 'transform:scale(1);opacity:1']]);
+  swap('#btnA', '#btnB', s + 1300);
+  pop('#c1', s + 1550, E(2), { from: 'opacity:0;transform:translateX(-30px) scale(.8)', ...stay });
+  pop('#c2', s + 1800, E(2), { from: 'opacity:0;transform:translateX(-30px) scale(.8)', ...stay });
 
-  // panel 3 — payroll
-  show('#p3', 6350, 7550, { from: 'opacity:0;transform:translateY(70px)', din: 600, out: 'opacity:0;transform:translateY(-50px)' });
-  ['#g1', '#g2', '#g3', '#g4'].forEach((s, i) => pop(s, 6750 + i * 110, 7550, { out: 'opacity:1;transform:none', dout: 10 }));
-  show('#slip', 7150, 7550, { from: 'opacity:0;transform:translateY(16px)', out: 'opacity:1;transform:none', dout: 10 });
+  // 3 approvals
+  s = S(3);
+  ['#r1', '#r2', '#r3', '#r4'].forEach((q, i) => show(q, s + 250 + i * 130, E(3), { from: 'opacity:0;transform:translateX(40px)', ...stay }));
+  ['#q1', '#q2', '#q3', '#q4'].forEach((q, i) => pop(q, s + 1000 + i * 220, E(3), stay));
+  show('#f3', s + 2000, E(3), { from: 'opacity:0;transform:translateY(16px)', ...stay });
 
-  // ---------- D. 7.8–9.5 s: end card ----------
-  rise('#e1 .in', 7800, 9150, { out: 'transform:translateY(-112%)' });
-  rise('#e2 .in', 7920, 9180, { out: 'transform:translateY(-112%)' });
-  show('#cta', 8300, 9180, { from: 'opacity:0;transform:translateY(30px) scale(.96)', din: 550 });
-  A('#pill i', [[0, 'box-shadow:0 0 0 0 rgba(217,84,30,.7)'], [8600, 'box-shadow:0 0 0 0 rgba(217,84,30,.7)', 'ease-out'], [9150, 'box-shadow:0 0 0 18px rgba(217,84,30,0)']]);
+  // 4 payroll (counter in render())
+  s = S(4);
+  ['#b1', '#b2', '#b3'].forEach((q, i) => show(q, s + 500 + i * 120, E(4), { from: 'opacity:0;transform:translateY(16px)', ...stay }));
+  ['#g1', '#g2', '#g3', '#g4'].forEach((q, i) => pop(q, s + 1100 + i * 150, E(4), stay));
+  show('#slip', s + 1900, E(4), { from: 'opacity:0;transform:translateY(16px)', ...stay });
 
-  // ---------- ambient (whole loop, seamless) ----------
+  // 5 government reports
+  s = S(5);
+  ['#v1', '#v2', '#v3', '#v4'].forEach((q, i) => show(q, s + 250 + i * 130, E(5), { from: 'opacity:0;transform:translateX(40px)', ...stay }));
+  ['#x1', '#x2', '#x3', '#x4'].forEach((q, i) => pop(q, s + 1000 + i * 220, E(5), stay));
+  show('#f5', s + 2000, E(5), { from: 'opacity:0;transform:translateY(16px)', ...stay });
+
+  // ---------- end card ----------
+  rise('#e1 .in', END, T - 1300);
+  rise('#e2 .in', END + 150, T - 1250);
+  document.querySelectorAll('#feats span').forEach((el, i) => show(el, END + 900 + i * 90, T - 1250, { from: 'opacity:0;transform:translateY(20px)', din: 600, dout: 400, out: 'opacity:0;transform:translateY(-10px)' }));
+  show('#cta', END + 1800, T - 1200, { from: 'opacity:0;transform:translateY(30px) scale(.96)', din: 700 });
+  A('#pill i', [[0, 'box-shadow:0 0 0 0 rgba(217,84,30,.7)'], [END + 2400, 'box-shadow:0 0 0 0 rgba(217,84,30,.7)', 'ease-out'], [END + 3300, 'box-shadow:0 0 0 22px rgba(217,84,30,0)']]);
+
+  // ---------- ambient, seamless over the loop ----------
   A('#orbit', [[0, 'transform:rotate(0deg)'], [T, 'transform:rotate(360deg)']]);
-  A('#glow', [[0, 'transform:translate(-120px,40px) scale(1);opacity:.7', 'ease-in-out'], [2500, 'transform:translate(0,0) scale(1.08);opacity:1', 'ease-in-out'],
-              [5000, 'transform:translate(260px,-20px) scale(1);opacity:.85', 'ease-in-out'], [8000, 'transform:translate(0,0) scale(1.12);opacity:1', 'ease-in-out'],
+  A('#glow', [[0, 'transform:translate(-120px,40px) scale(1);opacity:.7', 'ease-in-out'], [T * .25, 'transform:translate(0,0) scale(1.08);opacity:1', 'ease-in-out'],
+              [T * .5, 'transform:translate(260px,-20px) scale(1);opacity:.85', 'ease-in-out'], [T * .8, 'transform:translate(0,0) scale(1.12);opacity:1', 'ease-in-out'],
               [T, 'transform:translate(-120px,40px) scale(1);opacity:.7']]);
 
-  // apply everything in one go so all animations share a start time
   const st = document.createElement('style'); st.textContent = css; document.head.appendChild(st);
   const byEl = new Map();
   jobs.forEach(([el, name]) => { if (!byEl.has(el)) byEl.set(el, []); byEl.get(el).push(`${name} ${T}ms linear 0s infinite both`); });
   byEl.forEach((list, el) => { el.style.animation = list.join(','); });
+
+  // the warning outline sits on Carlo's row
+  const row = [...document.querySelectorAll('#sgrid .nm')][2], p1 = $('#p1');
+  const rr = row.getBoundingClientRect(), pr = p1.getBoundingClientRect();
+  $('#wrow').style.top = (rr.top - pr.top + rr.height / 2 - 35) + 'px';
 }
 
-// net-pay counter, driven by the same clock as the CSS
+// net-pay counter, on the same clock as the CSS
 const net = $('#net');
 const NET = 612480.50;
 const fmt = v => v.toLocaleString('en-PH', { minimumFractionDigits: 2, maximumFractionDigits: 2 });
 function render(t) {
-  const a = 6500, b = 7300;
+  const a = S(4) + 700, b = S(4) + 2100;
   const p = t <= a ? 0 : t >= b ? 1 : 1 - Math.pow(1 - (t - a) / (b - a), 3);
   net.textContent = fmt(NET * p);
 }
 
 function fit() {
-  const w = document.getElementById('wrap'); const s = Math.min(w.clientWidth / 1920, w.clientHeight / 1080);
+  const w = $('#wrap');
+  const s = Math.min(w.clientWidth / 1920, w.clientHeight / 1080);
   stage.style.transform = `translate(-50%,-50%) scale(${s})`;
 }
 
@@ -373,10 +523,9 @@ document.fonts.ready.then(() => {
   (function tick() { if (anims[0] && !window.__seeking) render((anims[0].currentTime ?? 0) % T); requestAnimationFrame(tick); })();
   window.__ready = true;
 });
-// used by the MP4 renderer: freeze every animation at time t (ms)
+window.__T = T;
 window.__seek = t => { window.__seeking = true; anims.forEach(a => { a.pause(); a.currentTime = t; }); render(t); };
 
-// fullscreen + hide the cursor when idle
 const goFull = () => { if (!document.fullscreenElement) document.documentElement.requestFullscreen?.(); };
 addEventListener('click', goFull);
 addEventListener('keydown', e => { if (e.key === 'f' || e.key === 'F') goFull(); });
